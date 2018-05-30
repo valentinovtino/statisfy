@@ -1,5 +1,5 @@
 import { getFoodData } from './api';
-import { mockObt } from './api';
+import { mockObj } from './api';
 
 describe('API', () => {
   let url;
@@ -10,5 +10,24 @@ describe('API', () => {
       json: () => Promise.resolve(mockObj)
     })
     );
+  });
+  it('should make fetch with the correct params', () => {
+    getFoodData(url);
+
+    expect(window.fetch).toHaveBeenCalledWith(url);
+  });
+
+  it('should return a food data object', async () => {
+    let actual = await getFoodData(url);
+
+    expect(actual).toEqual(mockObj);
+  });
+
+  it('should throw an error when catch error is hit', async () => {
+    window.fetch = jest.fn().mockImplementation(() => Promise.resolve({ status: 404 }));
+
+    const expectedError = Error('TypeError: response.json is not a function');
+
+    await expect(getFoodData(url)).rejects.toEqual(expectedError);
   });
 });
