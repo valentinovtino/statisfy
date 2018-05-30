@@ -1,9 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
+import { shallow, mount } from 'enzyme';
+import { mockObj } from '../../mockData.js';
 
-it('renders without crashing', () => {
-  const div = document.createElement('div');
-  ReactDOM.render(<App />, div);
-  ReactDOM.unmountComponentAtNode(div);
+describe('App', () => {
+  let wrapper;
+  let mockStoreFood = jest.fn();
+
+  beforeEach(() => {
+    wrapper = shallow(<App storeFood={mockStoreFood}/>);
+  });
+
+  it('matches snapshot', () => {
+    expect(wrapper).toMatchSnapshot();
+  });
 });
