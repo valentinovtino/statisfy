@@ -1,11 +1,10 @@
 export const getFoodData = async (url) => {
-  try {
-
+  // try {
     const response = await fetch(url);
     const data = await response.json(); 
     
     return data;
-  } catch (error) {
-    throw new Error(error);
-  }
+  // } catch (error) {
+    // throw new Error(error);
+  // }
 };

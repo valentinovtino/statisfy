@@ -5,5 +5,4 @@ export const food = (state = [], action) => {
     default:
       return state;
   }
-
 };
