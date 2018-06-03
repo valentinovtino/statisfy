@@ -41,6 +41,7 @@ class App extends Component {
 
   render() {
     const { food } = this.props
+
     
     return (
       <div className="App">
