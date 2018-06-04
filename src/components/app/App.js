@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import { getFoodData } from '../../apiCalls/api';
 import PropTypes from 'prop-types';
-import FoodHolder from '../foodHolder/foodHolder';
+import FoodHolder from '../../containers/foodHolderContainer';
 
 class App extends Component {
   constructor(props) {

@@ -3,10 +3,9 @@ import { cleanData } from '../../apiCalls/helper';
 import Card from '../Card/Card';
 import './foodHolder.css';
 
-const foodHolder = () => {
-    const { food } = this.props;
-    {console.log(food)}
-  const showHouses = food.map((food, index) => {
+const foodHolder = (props) => {
+    {console.log(props)}
+  const showHouses = props.food.map((food, index) => {
     return <Card food={food} key={index}/>;
   });
 
