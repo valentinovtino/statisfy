@@ -8,10 +8,14 @@
   color: white;
 }
 .App-title {
-  font-size: 1.5em;
+  font-family: 'title';
+  font-size: 5em;
 }
 
-
+@font-face {
+  font-family: title;
+  src: url(../../Fonts/PWYummyDonuts2.ttf);
+}
 /*  */
 
 
@@ -20,11 +24,12 @@
   top: 0;
   bottom: 0;
   left: 0;
-  right: 0;
+  right: 30em;
   margin: auto;
   width: .5rem;
   height: 12.5rem;
   perspective: 70rem;
+  
 }
 .cover {
   background-color: #36354e;
@@ -93,7 +98,7 @@
 }
 @keyframes bookCover {
   30% { z-index: 999 }
-  100% {  transform: rotateY(180deg);
+  100% {  transform: rotateY(160deg);
     z-index: 1;}
 }
 @keyframes bookOpen150deg {
@@ -103,12 +108,12 @@
 }
 @keyframes bookOpen55deg {
   30% { z-index: 999 }
-  100% {  transform: rotateY(30deg);
+  100% {  transform: rotateY(26deg);
     z-index: 999;}
 }
 @keyframes bookOpen30deg {
   50% { z-index: 999 }
-  100% {  transform: rotateY(25deg);
+  100% {  transform: rotateY(18deg);
     z-index: 999;}
 }
 
