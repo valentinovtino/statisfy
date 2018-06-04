@@ -8,7 +8,7 @@ class App extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      test: ''
+      test: 'testing'
     }
   }
 
@@ -42,6 +42,7 @@ class App extends Component {
   render() {
     const { food } = this.props
 
+   
     
     return (
       <div className="App">
@@ -54,7 +55,7 @@ class App extends Component {
 
         <div>
           { food.length >0 ?
-            <FoodHolder/> :
+            <FoodHolder allState={this.state}/> :
             <div>
             </div>
           }

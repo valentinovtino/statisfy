@@ -1,0 +1,36 @@
+ .card {
+    width: 260px;
+    height: 333px;
+    border: 1px solid red;
+    padding: 10px;
+    text-align: center;
+    margin: 20px;
+    box-shadow: 5px 7px 5px black;
+    opacity: .8; 
+    display: flex;
+    flex-direction: column;
+}
+
+.food-img {
+    height: 100%;
+    width: 100%;
+}
+
+.food-title {
+    font-size: small;
+}
+
+.top {
+    border: 1px solid blue;
+    display: flex;
+    flex-direction: row;
+}
+
+.vote-btns {
+    display: flex;
+    flex-direction: column;
+}
+
+.bottom {
+    border: 1px solid green;
+}
