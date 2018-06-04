@@ -14,7 +14,9 @@ class Card extends Component {
 
     return (
       <div>
+        <img src={food.image_url}/>
         <h1>Name: {food.title}</h1>
+        <p> Recipe: {food.source_url}</p>
       </div>
     );
   }
