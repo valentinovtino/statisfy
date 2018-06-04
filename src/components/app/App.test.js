@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
+import App from '../../containers/appContainer';
 import { shallow, mount } from 'enzyme';
 import { mockObj } from '../../mockData.js';
 
@@ -14,5 +14,13 @@ describe('App', () => {
 
   it('matches snapshot', () => {
     expect(wrapper).toMatchSnapshot();
+  });
+
+  it('should storeFood when called', () => {
+
+  });
+
+  it('should render food category btn if there is no value in store', () => {
+
   });
 });

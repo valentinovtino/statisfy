@@ -63,8 +63,8 @@ class App extends Component {
       <div className="App">
         {/* <header className="App-header">
         </header> */}
-          <NavLink to='/' onClick={this.toggle} className="App-title">SATISY</NavLink>
-
+          {/* <NavLink to='/' onClick={this.toggle} className="App-title">SATISY</NavLink> */}
+          <h1 className="App-title">SATISY</h1>
         
         {/* <Route exact path='/' component={} /> */}
         {/* <Route exact path='./Sweet' component={FoodHolder} /> */}
@@ -78,13 +78,13 @@ class App extends Component {
               <span className="page turn"></span>
               <span className="page turn">~~~~~</span>
               <span className="page turn"></span>
-              <span className="page turn">
-                <h3>What're you craving?..</h3>
+              <span className="page turn flex-btn">
+                <h1 className='book-title'>What're you craving?..</h1>
                 {/* <NavLink to='./Sweet' 
               </NavLink> */}
-                <button onClick={this.makeFetchSweet}>SWEET</button>
-                <button onClick={this.makeFetchSavory}>SAVORY</button>
-                <button onClick={this.makeFetchNutty}>NUTTY</button>
+                <button className='food-btn' onClick={this.makeFetchSweet}>SWEET</button>
+                <button className='food-btn' onClick={this.makeFetchSavory}>SAVORY</button>
+                <button className='food-btn' onClick={this.makeFetchNutty}>NUTTY</button>
               </span>
               <span className="cover"></span>
               <span className="page"></span>
