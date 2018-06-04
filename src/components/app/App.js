@@ -49,9 +49,24 @@ class App extends Component {
         <header className="App-header">
           <h1 className="App-title">SATISY</h1>
         </header>
-        <button onClick={this.makeFetchSweet}>SWEET</button>
-        <button onClick={this.makeFetchSavory}>SAVORY</button>
-        <button onClick={this.makeFetchNutty}>NUTTY</button>
+
+        
+        <div className="book">
+          <span className="page turn"></span>
+          <span className="page turn"></span>
+          <span className="page turn"></span>
+          <span className="page turn">~~~~~</span>
+          <span className="page turn"></span>
+          <span className="page turn">
+            <h3>What're you craving?..</h3>
+            <button onClick={this.makeFetchSweet}>SWEET</button>
+            <button onClick={this.makeFetchSavory}>SAVORY</button>
+            <button onClick={this.makeFetchNutty}>NUTTY</button>
+          </span>
+          <span className="cover"></span>
+          <span className="page"></span>
+          <span className="cover turn"></span>
+        </div>
 
         <div>
           { food.length >0 ?

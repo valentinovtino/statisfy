@@ -1,7 +1,7 @@
  .card {
     width: 260px;
-    height: 333px;
-    border: 1px solid red;
+    height: 360px;
+    border: 1px solid black;
     padding: 10px;
     text-align: center;
     margin: 20px;
@@ -9,15 +9,20 @@
     opacity: .8; 
     display: flex;
     flex-direction: column;
+    border-radius: 25px;
 }
 
 .food-img {
     height: 100%;
     width: 100%;
+    border: 2px solid black;
+    border-radius: 25px;
 }
 
 .food-title {
-    font-size: small;
+    font-family: 'Boogaloo', cursive;
+    font-size: large;
+    letter-spacing: 2px;
 }
 
 .top {
@@ -26,11 +31,25 @@
     flex-direction: row;
 }
 
+.food-container {
+    width: 75%;
+    height: 80%;
+}
 .vote-btns {
     display: flex;
     flex-direction: column;
 }
 
+.vote {
+    height: 100px;
+    width: 100px;
+}
+
 .bottom {
     border: 1px solid green;
+    margin-top: 25px;
+}
+
+.link {
+    font-family: 'Boogaloo', cursive;
 }
