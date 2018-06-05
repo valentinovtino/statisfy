@@ -5,7 +5,9 @@ import PropTypes from 'prop-types';
 import FoodHolder from '../../containers/foodHolderContainer';
 import { NavLink, Route, Switch } from 'react-router-dom';
 import AppContainer from '../../containers/appContainer';
-
+import Sweet from '../Sweet/Sweet';
+import Nutty from '../Nutty/Nutty';
+import Savory from '../Savory/Savory';
 
 class App extends Component {
   constructor(props) {
@@ -50,47 +52,32 @@ class App extends Component {
   render() {
     const { food } = this.props;
 
-    const renderFood = <div>
-      { food.length >0 ?
-        <FoodHolder allState={this.state}/> :
-        <div>
-        </div>
-      }
-    </div>;
-   
-    
     return (
       <div className="App">
         {/* <header className="App-header">
         </header> */}
-          {/* <NavLink to='/' onClick={this.toggle} className="App-title">SATISY</NavLink> */}
-          <h1 className="App-title">SATISY</h1>
+        {/* <NavLink to='/' onClick={this.toggle} className="App-title">SATISY</NavLink> */}
+        <h1 className="App-title">SATISY</h1>
         
         {/* <Route exact path='/' component={} /> */}
         {/* <Route exact path='./Sweet' component={FoodHolder} /> */}
 
-        <div>
-          { food.length >0 ?
-            <FoodHolder allState={this.state}/> :
-            <div className="book">
-              <span className="page turn"></span>
-              <span className="page turn"></span>
-              <span className="page turn"></span>
-              <span className="page turn">~~~~~</span>
-              <span className="page turn"></span>
-              <span className="page turn flex-btn">
-                <h1 className='book-title'>What're you craving?..</h1>
-                {/* <NavLink to='./Sweet' 
-              </NavLink> */}
-                <button className='food-btn' onClick={this.makeFetchSweet}>SWEET</button>
-                <button className='food-btn' onClick={this.makeFetchSavory}>SAVORY</button>
-                <button className='food-btn' onClick={this.makeFetchNutty}>NUTTY</button>
-              </span>
-              <span className="cover"></span>
-              <span className="page"></span>
-              <span className="cover turn"></span>
-            </div>
+        <div> 
+          { 
+            food.length > 0 ?
+              <FoodHolder allState={this.state}/> :
+              <div>
+              </div>
           }
+          <div>
+            <NavLink className='food-btn' to='/sweet' onClick={this.makeFetchSweet}>SWEET</NavLink>
+            <NavLink className='food-btn' to='/savory' onClick={this.makeFetchSavory}>SAVORY</NavLink>
+            <NavLink className='food-btn' to='/nutty' onClick={this.makeFetchNutty}>NUTTY</NavLink>
+          </div>
+          <Route exact path='/sweet' component={Sweet}/>
+          <Route exact path='/savory' component={Savory}/>
+          <Route exact path='/nutty' component={Nutty}/>
+           
         </div>
        
       </div>

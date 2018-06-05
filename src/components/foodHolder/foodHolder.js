@@ -4,9 +4,8 @@ import Card from '../Card/Card';
 import './foodHolder.css';
 
 const foodHolder = (props) => {
-//     const { allState } = this.props
-//   const tester = allState.allState.test;
-//   {console.log(tester)}
+    {console.log(props)}
+
 
   const showHouses = props.food.map((food, index) => {
     return <Card food={food} key={index}/>;
