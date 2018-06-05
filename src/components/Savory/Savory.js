@@ -6,7 +6,7 @@ const Savory = () => {
 
   return (
     <div>
-        <h1>SAVORY</h1>
+        
       {FoodHolder}
     </div>
   )

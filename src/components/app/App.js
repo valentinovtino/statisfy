@@ -56,8 +56,8 @@ class App extends Component {
       <div className="App">
         {/* <header className="App-header">
         </header> */}
-        {/* <NavLink to='/' onClick={this.toggle} className="App-title">SATISY</NavLink> */}
-        <h1 className="App-title">SATISY</h1>
+        <NavLink to='/' className="App-title">SATISY</NavLink>
+        {/* <h1 className="App-title">SATISY</h1> */}
         
         {/* <Route exact path='/' component={} /> */}
         {/* <Route exact path='./Sweet' component={FoodHolder} /> */}
@@ -77,6 +77,7 @@ class App extends Component {
           <Route exact path='/sweet' component={Sweet}/>
           <Route exact path='/savory' component={Savory}/>
           <Route exact path='/nutty' component={Nutty}/>
+          {/* <Route exact path='/' component={} /> */}
            
         </div>
        
