@@ -1,4 +1,4 @@
-import { mapDispatchToProps } from './appContainer';
+import { mapDispatchToProps, mapStateToProps } from './appContainer';
 import { mockObj } from '../mockData';
 import { getFood } from '../actions/actions';
 
@@ -13,5 +13,15 @@ describe('AppContainer', () => {
     expect(dispatch).toHaveBeenCalledWith(actionToDispatch);
   });
 
-  
+  it('should return the food object', () => {
+    const mockState = {
+      food: {}
+    };
+
+    let expected = {}
+
+    const mappedProps = mapStateToProps(mockState).food
+
+    expect(mappedProps).toEqual(expected)
+  });
 });

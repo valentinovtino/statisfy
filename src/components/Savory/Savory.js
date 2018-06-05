@@ -5,8 +5,7 @@ import { withRouter } from 'react-router';
 const Savory = () => {
 
   return (
-    <div>
-        
+    <div>   
       {FoodHolder}
     </div>
   )
