@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import FoodHolder from '../foodHolder/foodHolder';
 import { withRouter } from 'react-router';
 
@@ -8,7 +8,7 @@ const Savory = () => {
     <div>   
       {FoodHolder}
     </div>
-  )
-}
+  );
+};
 
 export default withRouter(Savory);

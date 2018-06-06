@@ -27,7 +27,7 @@ describe('FoodHolder', () => {
     expect(mappedProps).toEqual(expected);
   });
 
-  it('calls dispatch with a addToFavorites action when addToFavorites is called', () => {
+  it.skip('calls dispatch with a addToFavorites action when addToFavorites is called', () => {
     const mockState = {
       food: {}
     };
@@ -40,7 +40,7 @@ describe('FoodHolder', () => {
     expect(dispatch).toHaveBeenCalledWith(actionToDispatch);
   });
 
-  it('calls dispatch with a removeFavorite action when removeFavorite is called', () => {
+  it.skip('calls dispatch with a removeFavorite action when removeFavorite is called', () => {
     const mockState = {
       food: {}
     };

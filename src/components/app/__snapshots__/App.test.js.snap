@@ -20,6 +20,19 @@ ShallowWrapper {
     "nodeType": "host",
     "props": Object {
       "children": Array [
+        <div
+          className="fave"
+>
+          <NavLink
+                    activeClassName="active"
+                    ariaCurrent="true"
+                    className="food-btn fave-btn"
+                    onClick={[Function]}
+                    to="/fave"
+          >
+                    My Kitchen
+          </NavLink>
+</div>,
         <NavLink
           activeClassName="active"
           ariaCurrent="true"
@@ -28,8 +41,15 @@ ShallowWrapper {
 >
           SATISY
 </NavLink>,
+        <p
+          className="slogan"
+>
+          What're you craving?..
+</p>,
         <div>
-          <div>
+          <div
+                    className="navs"
+          >
                     <NavLink
                               activeClassName="active"
                               ariaCurrent="true"
@@ -56,15 +76,6 @@ ShallowWrapper {
                               to="/nutty"
                     >
                               NUTTY
-                    </NavLink>
-                    <NavLink
-                              activeClassName="active"
-                              ariaCurrent="true"
-                              className="food-btn fave-btn"
-                              onClick={[Function]}
-                              to="/fave"
-                    >
-                              My Kitchen
                     </NavLink>
           </div>
           <withRouter(Connect(foodHolder))
@@ -95,12 +106,52 @@ ShallowWrapper {
                     exact={true}
                     path="/fave"
           />
+          <Route
+                    component={[Function]}
+                    exact={true}
+                    path="/"
+          />
 </div>,
       ],
       "className": "App",
     },
     "ref": null,
     "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": <NavLink
+            activeClassName="active"
+            ariaCurrent="true"
+            className="food-btn fave-btn"
+            onClick={[Function]}
+            to="/fave"
+>
+            My Kitchen
+</NavLink>,
+          "className": "fave",
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "activeClassName": "active",
+            "ariaCurrent": "true",
+            "children": "My Kitchen",
+            "className": "food-btn fave-btn",
+            "onClick": [Function],
+            "to": "/fave",
+          },
+          "ref": null,
+          "rendered": "My Kitchen",
+          "type": [Function],
+        },
+        "type": "div",
+      },
       Object {
         "instance": null,
         "key": undefined,
@@ -121,8 +172,22 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
+          "children": "What're you craving?..",
+          "className": "slogan",
+        },
+        "ref": null,
+        "rendered": "What're you craving?..",
+        "type": "p",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
           "children": Array [
-            <div>
+            <div
+              className="navs"
+>
               <NavLink
                             activeClassName="active"
                             ariaCurrent="true"
@@ -149,15 +214,6 @@ ShallowWrapper {
                             to="/nutty"
               >
                             NUTTY
-              </NavLink>
-              <NavLink
-                            activeClassName="active"
-                            ariaCurrent="true"
-                            className="food-btn fave-btn"
-                            onClick={[Function]}
-                            to="/fave"
-              >
-                            My Kitchen
               </NavLink>
 </div>,
             <withRouter(Connect(foodHolder))
@@ -187,6 +243,11 @@ ShallowWrapper {
               component={[Function]}
               exact={true}
               path="/fave"
+/>,
+            <Route
+              component={[Function]}
+              exact={true}
+              path="/"
 />,
           ],
         },
@@ -225,16 +286,8 @@ ShallowWrapper {
 >
                   NUTTY
 </NavLink>,
-                <NavLink
-                  activeClassName="active"
-                  ariaCurrent="true"
-                  className="food-btn fave-btn"
-                  onClick={[Function]}
-                  to="/fave"
->
-                  My Kitchen
-</NavLink>,
               ],
+              "className": "navs",
             },
             "ref": null,
             "rendered": Array [
@@ -284,22 +337,6 @@ ShallowWrapper {
                 },
                 "ref": null,
                 "rendered": "NUTTY",
-                "type": [Function],
-              },
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "function",
-                "props": Object {
-                  "activeClassName": "active",
-                  "ariaCurrent": "true",
-                  "children": "My Kitchen",
-                  "className": "food-btn fave-btn",
-                  "onClick": [Function],
-                  "to": "/fave",
-                },
-                "ref": null,
-                "rendered": "My Kitchen",
                 "type": [Function],
               },
             ],
@@ -371,6 +408,19 @@ ShallowWrapper {
             "rendered": null,
             "type": [Function],
           },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "component": [Function],
+              "exact": true,
+              "path": "/",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
         ],
         "type": "div",
       },
@@ -384,6 +434,19 @@ ShallowWrapper {
       "nodeType": "host",
       "props": Object {
         "children": Array [
+          <div
+            className="fave"
+>
+            <NavLink
+                        activeClassName="active"
+                        ariaCurrent="true"
+                        className="food-btn fave-btn"
+                        onClick={[Function]}
+                        to="/fave"
+            >
+                        My Kitchen
+            </NavLink>
+</div>,
           <NavLink
             activeClassName="active"
             ariaCurrent="true"
@@ -392,8 +455,15 @@ ShallowWrapper {
 >
             SATISY
 </NavLink>,
+          <p
+            className="slogan"
+>
+            What're you craving?..
+</p>,
           <div>
-            <div>
+            <div
+                        className="navs"
+            >
                         <NavLink
                                     activeClassName="active"
                                     ariaCurrent="true"
@@ -420,15 +490,6 @@ ShallowWrapper {
                                     to="/nutty"
                         >
                                     NUTTY
-                        </NavLink>
-                        <NavLink
-                                    activeClassName="active"
-                                    ariaCurrent="true"
-                                    className="food-btn fave-btn"
-                                    onClick={[Function]}
-                                    to="/fave"
-                        >
-                                    My Kitchen
                         </NavLink>
             </div>
             <withRouter(Connect(foodHolder))
@@ -459,12 +520,52 @@ ShallowWrapper {
                         exact={true}
                         path="/fave"
             />
+            <Route
+                        component={[Function]}
+                        exact={true}
+                        path="/"
+            />
 </div>,
         ],
         "className": "App",
       },
       "ref": null,
       "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": <NavLink
+              activeClassName="active"
+              ariaCurrent="true"
+              className="food-btn fave-btn"
+              onClick={[Function]}
+              to="/fave"
+>
+              My Kitchen
+</NavLink>,
+            "className": "fave",
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "activeClassName": "active",
+              "ariaCurrent": "true",
+              "children": "My Kitchen",
+              "className": "food-btn fave-btn",
+              "onClick": [Function],
+              "to": "/fave",
+            },
+            "ref": null,
+            "rendered": "My Kitchen",
+            "type": [Function],
+          },
+          "type": "div",
+        },
         Object {
           "instance": null,
           "key": undefined,
@@ -485,8 +586,22 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
+            "children": "What're you craving?..",
+            "className": "slogan",
+          },
+          "ref": null,
+          "rendered": "What're you craving?..",
+          "type": "p",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
             "children": Array [
-              <div>
+              <div
+                className="navs"
+>
                 <NavLink
                                 activeClassName="active"
                                 ariaCurrent="true"
@@ -513,15 +628,6 @@ ShallowWrapper {
                                 to="/nutty"
                 >
                                 NUTTY
-                </NavLink>
-                <NavLink
-                                activeClassName="active"
-                                ariaCurrent="true"
-                                className="food-btn fave-btn"
-                                onClick={[Function]}
-                                to="/fave"
-                >
-                                My Kitchen
                 </NavLink>
 </div>,
               <withRouter(Connect(foodHolder))
@@ -551,6 +657,11 @@ ShallowWrapper {
                 component={[Function]}
                 exact={true}
                 path="/fave"
+/>,
+              <Route
+                component={[Function]}
+                exact={true}
+                path="/"
 />,
             ],
           },
@@ -589,16 +700,8 @@ ShallowWrapper {
 >
                     NUTTY
 </NavLink>,
-                  <NavLink
-                    activeClassName="active"
-                    ariaCurrent="true"
-                    className="food-btn fave-btn"
-                    onClick={[Function]}
-                    to="/fave"
->
-                    My Kitchen
-</NavLink>,
                 ],
+                "className": "navs",
               },
               "ref": null,
               "rendered": Array [
@@ -648,22 +751,6 @@ ShallowWrapper {
                   },
                   "ref": null,
                   "rendered": "NUTTY",
-                  "type": [Function],
-                },
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "function",
-                  "props": Object {
-                    "activeClassName": "active",
-                    "ariaCurrent": "true",
-                    "children": "My Kitchen",
-                    "className": "food-btn fave-btn",
-                    "onClick": [Function],
-                    "to": "/fave",
-                  },
-                  "ref": null,
-                  "rendered": "My Kitchen",
                   "type": [Function],
                 },
               ],
@@ -730,6 +817,19 @@ ShallowWrapper {
                 "component": [Function],
                 "exact": true,
                 "path": "/fave",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "component": [Function],
+                "exact": true,
+                "path": "/",
               },
               "ref": null,
               "rendered": null,

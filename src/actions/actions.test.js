@@ -19,7 +19,7 @@ describe('Actions', () => {
   describe('Create User', () => {
     it('should return an action object', () => {
       const favorites = {
-    };
+      };
       
       let expected = {
         type: 'CREATE_FAVORITES'
