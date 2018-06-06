@@ -3,7 +3,7 @@ import './App.css';
 import { getFoodData } from '../../apiCalls/api';
 import PropTypes from 'prop-types';
 import FoodHolder from '../../containers/foodHolderContainer';
-import { NavLink, Route, Switch } from 'react-router-dom';
+import { NavLink, Route } from 'react-router-dom';
 import Sweet from '../Sweet/Sweet';
 import Nutty from '../Nutty/Nutty';
 import Savory from '../Savory/Savory';
@@ -22,30 +22,30 @@ class App extends Component {
   makeFetchSweet = async () => {
     const url = `https://food2fork.com/api/search?key=e3e6267f800bf94ed1db6763e826e406&q=vegan`;
     const response = await getFoodData(url);
-    const data = response;
+    const foodData = response;
 
 
-    this.props.storeFood(data.recipes);
+    this.props.storeFood(foodData.recipes);
     this.setState({click: false});
   }
 
   makeFetchSavory = async () => {
     const url = 'https://food2fork.com/api/search?key=e3e6267f800bf94ed1db6763e826e406&q=savory';
     const response = await getFoodData(url);
-    const data = response;
+    const foodData = response;
 
 
-    this.props.storeFood(data.recipes);
+    this.props.storeFood(foodData.recipes);
     this.setState({click: false});
   }
 
   makeFetchNutty = async () => {
     const url = 'https://food2fork.com/api/search?key=e3e6267f800bf94ed1db6763e826e406&q=nutty';
     const response = await getFoodData(url);
-    const data = response;
+    const foodData = response;
 
 
-    this.props.storeFood(data.recipes);
+    this.props.storeFood(foodData.recipes);
     this.setState({click: false});
   }
 
@@ -55,7 +55,6 @@ class App extends Component {
 
 
   render() {
-    const { food } = this.props;
 
     return (
       <div className="App">

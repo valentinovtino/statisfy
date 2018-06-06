@@ -1,5 +1,4 @@
-import { getFoodData } from './api';
-import { mockObj } from './api';
+import { getFoodData, mockObj } from './api';
 
 describe('API', () => {
   let url;

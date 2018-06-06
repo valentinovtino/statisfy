@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import { connect } from 'react-redux';
 import './Card.css';
 import PropTypes from 'prop-types';
 
@@ -20,8 +19,8 @@ class Card extends Component {
   }
 
   render() {
-    const { food, fave, allState } = this.props;
-    // const clickProp = allState.click;
+    const { food, fave } = this.props;
+
     return (
       this.props.food ?
 

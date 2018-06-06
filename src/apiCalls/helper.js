@@ -1,5 +1,5 @@
-export const cleanData = (data) => {
-  return data.map((food) => {
+export const cleanData = (foodData) => {
+  return foodData.map((food) => {
     return {
       title: food.title, 
       img: food.image_url, 

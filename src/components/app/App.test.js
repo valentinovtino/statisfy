@@ -1,7 +1,6 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import App from './App';
-import { shallow, mount } from 'enzyme';
+import { shallow } from 'enzyme';
 import { mockObj } from '../../mockData.js';
 
 
@@ -19,27 +18,27 @@ describe('App', () => {
 
   it('should render Savory button', () => {
     wrapper = shallow(<App storeFood={mockStoreFood}/>, {disableLifecycleMethods: true});
-    expect(wrapper.find('.savory-btn').length).toEqual(1)
+    expect(wrapper.find('.savory-btn').length).toEqual(1);
   });
 
   it('should render Sweet button', () => {
     wrapper = shallow(<App storeFood={mockStoreFood}/>, {disableLifecycleMethods: true});
-    expect(wrapper.find('.sweet-btn').length).toEqual(1)
+    expect(wrapper.find('.sweet-btn').length).toEqual(1);
   });
 
   it('should render nutty button', () => {
     wrapper = shallow(<App storeFood={mockStoreFood}/>, {disableLifecycleMethods: true});
-    expect(wrapper.find('.nutty-btn').length).toEqual(1)
+    expect(wrapper.find('.nutty-btn').length).toEqual(1);
   });
 
   it('should render fave button', () => {
     wrapper = shallow(<App storeFood={mockStoreFood}/>, {disableLifecycleMethods: true});
-    expect(wrapper.find('.fave-btn').length).toEqual(1)
+    expect(wrapper.find('.fave-btn').length).toEqual(1);
   });
 
 
   it('should storeFood when called', async () => {
-    window.fetch = jest.fn().mockImplementation(() => Promise.resolve({json: () => Promise.resolve(mockObj)}))
+    window.fetch = jest.fn().mockImplementation(() => Promise.resolve({json: () => Promise.resolve(mockObj)}));
 
     await wrapper.instance().makeFetchSweet();
 
@@ -47,7 +46,7 @@ describe('App', () => {
   });
 
   it('should storeFood when called', async () => {
-    window.fetch = jest.fn().mockImplementation(() => Promise.resolve({json: () => Promise.resolve(mockObj)}))
+    window.fetch = jest.fn().mockImplementation(() => Promise.resolve({json: () => Promise.resolve(mockObj)}));
 
     await wrapper.instance().makeFetchSavory();
 
@@ -55,7 +54,7 @@ describe('App', () => {
   });
 
   it('should storeFood when called', async () => {
-    window.fetch = jest.fn().mockImplementation(() => Promise.resolve({json: () => Promise.resolve(mockObj)}))
+    window.fetch = jest.fn().mockImplementation(() => Promise.resolve({json: () => Promise.resolve(mockObj)}));
 
     await wrapper.instance().makeFetchNutty();
 
