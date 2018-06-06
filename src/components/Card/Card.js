@@ -63,6 +63,7 @@ class Card extends Component {
     );
   }
 }
+
 Card.propTypes = {
   addToFavorites: PropTypes.func,
   removeFavorite: PropTypes.func,

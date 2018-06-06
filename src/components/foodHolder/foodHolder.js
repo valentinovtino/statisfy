@@ -14,8 +14,8 @@ const foodHolder = (props) => {
     });     
   }
   if (props.allState.click === true) {
-    showOptions = props.favorites.map((fave) => {
-      return <Card allState={props.allState} fave={fave} id={props.recipe_id} removeFavorite={props.removeFavorite}/>;
+    showOptions = props.favorites.map((fave, index) => {
+      return <Card allState={props.allState} key={index} fave={fave} id={props.recipe_id} removeFavorite={props.removeFavorite}/>;
     });
   }
 
@@ -24,6 +24,16 @@ const foodHolder = (props) => {
       {showOptions}
     </div>
   );
+};
+
+foodHolder.propTypes = {
+  addToFavorites: PropTypes.func,
+  removeFavorite: PropTypes.func,
+  food: PropTypes.Array,
+  fave: PropTypes.Array,
+  allState: PropTypes.Object,
+  favorites: PropTypes.Array,
+  recipe_id: PropTypes.number
 };
 
 export default foodHolder;
