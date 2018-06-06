@@ -7,7 +7,7 @@ const foodHolder = (props) => {
 
   const showHouses = props.food.map((food, index) => {
     return <Card food={food} key={index}/>;
-  });
+  });                                                                                                                                                                                         
 
   return (
     <div className='card-container'>

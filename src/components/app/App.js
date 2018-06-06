@@ -62,7 +62,6 @@ class App extends Component {
 
         <div> 
           <div>
-            <button className='savory-btn'></button>
             <NavLink className='food-btn sweet-btn' to='/sweet' onClick={this.makeFetchSweet}>SWEET</NavLink>
             <NavLink className='food-btn savory-btn' to='/savory' onClick={this.makeFetchSavory}>SAVORY</NavLink>
             <NavLink className='food-btn' to='/nutty' onClick={this.makeFetchNutty}>NUTTY</NavLink>
