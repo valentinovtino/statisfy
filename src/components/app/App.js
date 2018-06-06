@@ -4,7 +4,6 @@ import { getFoodData } from '../../apiCalls/api';
 import PropTypes from 'prop-types';
 import FoodHolder from '../../containers/foodHolderContainer';
 import { NavLink, Route, Switch } from 'react-router-dom';
-import AppContainer from '../../containers/appContainer';
 import Sweet from '../Sweet/Sweet';
 import Nutty from '../Nutty/Nutty';
 import Savory from '../Savory/Savory';
@@ -16,7 +15,7 @@ class App extends Component {
     this.state = {
       click: false,
       test: 'testing'
-    };
+    };                                 
   }
 
   makeFetchSweet = async () => {
@@ -67,15 +66,11 @@ class App extends Component {
           <div>
             <NavLink className='food-btn sweet-btn' to='/sweet' onClick={this.makeFetchSweet}>SWEET</NavLink>
             <NavLink className='food-btn savory-btn' to='/savory' onClick={this.makeFetchSavory}>SAVORY</NavLink>
-            <NavLink className='food-btn' to='/nutty' onClick={this.makeFetchNutty}>NUTTY</NavLink>
-            <NavLink className='food-btn' onClick={this.notifyFave} to='/fave'>My Kitchen</NavLink>
+            <NavLink className='food-btn nutty-btn' to='/nutty' onClick={this.makeFetchNutty}>NUTTY</NavLink>
+            <NavLink className='food-btn fave-btn' onClick={this.notifyFave} to='/fave'>My Kitchen</NavLink>
           </div>
-          { 
-            food.length > 0 ?
-              <FoodHolder allState={this.state}/> :
-              <div>
-              </div>
-          }
+         
+          <FoodHolder allState={this.state}/> 
           <Route exact path='/sweet' component={Sweet}/>
           <Route exact path='/savory' component={Savory}/>
           <Route exact path='/nutty' component={Nutty}/>
@@ -87,7 +82,7 @@ class App extends Component {
 }
 
 App.propTypes = {
-  food: PropTypes.Array,
-  storeFood: PropTypes.Array
+  food: PropTypes.func,
+  storeFood: PropTypes.func.isRequired
 };
 export default App;
