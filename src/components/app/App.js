@@ -63,7 +63,7 @@ class App extends Component {
         <div className='fave'>
           <NavLink className='food-btn fave-btn' onClick={this.notifyFave} to='/fave'>My Kitchen</NavLink>
         </div>
-        <NavLink to='/' className="App-title">SATISY</NavLink>
+        <NavLink to='/' className="App-title">SATISFY</NavLink>
         <p className='slogan'>What're you craving?..</p>
 
         <div> 
