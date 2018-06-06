@@ -3,5 +3,9 @@ body {
   padding: 0;
   font-family: sans-serif;
 
-  background-image: url('https://balkanandroid.com/wp-content/uploads/2015/04/wood-wallpaper-1.jpg')
+  /* background-image: url('https://balkanandroid.com/wp-content/uploads/2015/04/wood-wallpaper-1.jpg') */
+ 
+  background-image: url('https://ae01.alicdn.com/kf/HTB1_KRmSXXXXXcFXpXXq6xXFXXXt/Kitchen-Wall-White-Brick-Wall-photo-backdrop-Vinyl-cloth-High-quality-Computer-printed-wedding-Backgrounds.jpg_640x640.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
 }

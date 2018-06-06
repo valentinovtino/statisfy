@@ -10,7 +10,7 @@
 .App-title {
   font-family: 'title';
   font-size: 10em;
-  color: White;
+  color: #324E46;
   text-decoration: none;
   text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
@@ -29,11 +29,15 @@
 }
 
 .navs{
+  color: #324E46;
   display: flex;
   margin-left: 50px;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
+
 .fave{
+  color: #324E46;
   display: flex;
   justify-content: flex-end;
 
@@ -41,6 +45,7 @@
 .fave-btn {
   /* display: flex; */
   align-self: flex-start;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
 .slogan{
@@ -48,6 +53,7 @@
   font-size: 2em;
   margin-top: 0;
   margin-left: 200px;
+  
 }
 
 .food-btn {
@@ -59,8 +65,8 @@
   text-decoration: none;
 }
 
-.food-btn:hover {
-  color: red;
+.active, .food-btn:hover {
+  color: #324E46;
 }
 
 
