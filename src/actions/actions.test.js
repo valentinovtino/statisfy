@@ -49,6 +49,15 @@ describe('Actions', () => {
   });
 
   describe('Remove from Favorites', () => {
-    
-  })
+    it('should return an action object', () => {
+      let expected = {
+        type: 'REMOVE_FAVORITE',
+        title: 'Herb marinated chicken'
+      };
+
+      let actual = actions.removeFavorite('Herb marinated chicken');
+
+      expect(actual).toEqual(expected);
+    });
+  });
 });

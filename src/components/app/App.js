@@ -19,7 +19,7 @@ class App extends Component {
   }
 
   makeFetchSweet = async () => {
-    const url = `https://food2fork.com/api/search?key=e3e6267f800bf94ed1db6763e826e406&q=sweet`;
+    const url = `https://food2fork.com/api/search?key=e3e6267f800bf94ed1db6763e826e406&q=vegan`;
     const response = await getFoodData(url);
     const data = response;
 
