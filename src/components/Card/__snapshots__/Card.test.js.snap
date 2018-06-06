@@ -1,0 +1,381 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Card should render a card 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Card
+    food={Object {}}
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <div
+          className="top"
+>
+          <div
+                    className="food-container"
+          >
+                    <img
+                              className="food-img"
+                              src={undefined}
+                    />
+          </div>
+          <div
+                    className="vote-btns"
+          >
+                    <img
+                              className="vote"
+                              src="https://cdn3.iconfinder.com/data/icons/pixo-icons-2/56/1-29-512.png"
+                    />
+          </div>
+</div>,
+        <div
+          className="bottom"
+>
+          <h1
+                    className="food-title"
+          />
+          <a
+                    className="link"
+                    href={undefined}
+          >
+                    Recipe
+          </a>
+</div>,
+      ],
+      "className": "card",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <div
+              className="food-container"
+>
+              <img
+                            className="food-img"
+                            src={undefined}
+              />
+</div>,
+            <div
+              className="vote-btns"
+>
+              <img
+                            className="vote"
+                            src="https://cdn3.iconfinder.com/data/icons/pixo-icons-2/56/1-29-512.png"
+              />
+</div>,
+          ],
+          "className": "top",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": <img
+                className="food-img"
+                src={undefined}
+/>,
+              "className": "food-container",
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": "food-img",
+                "src": undefined,
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "img",
+            },
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": <img
+                className="vote"
+                src="https://cdn3.iconfinder.com/data/icons/pixo-icons-2/56/1-29-512.png"
+/>,
+              "className": "vote-btns",
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": "vote",
+                "src": "https://cdn3.iconfinder.com/data/icons/pixo-icons-2/56/1-29-512.png",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "img",
+            },
+            "type": "div",
+          },
+        ],
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <h1
+              className="food-title"
+/>,
+            <a
+              className="link"
+              href={undefined}
+>
+              Recipe
+</a>,
+          ],
+          "className": "bottom",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": undefined,
+              "className": "food-title",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "h1",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Recipe",
+              "className": "link",
+              "href": undefined,
+            },
+            "ref": null,
+            "rendered": "Recipe",
+            "type": "a",
+          },
+        ],
+        "type": "div",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <div
+            className="top"
+>
+            <div
+                        className="food-container"
+            >
+                        <img
+                                    className="food-img"
+                                    src={undefined}
+                        />
+            </div>
+            <div
+                        className="vote-btns"
+            >
+                        <img
+                                    className="vote"
+                                    src="https://cdn3.iconfinder.com/data/icons/pixo-icons-2/56/1-29-512.png"
+                        />
+            </div>
+</div>,
+          <div
+            className="bottom"
+>
+            <h1
+                        className="food-title"
+            />
+            <a
+                        className="link"
+                        href={undefined}
+            >
+                        Recipe
+            </a>
+</div>,
+        ],
+        "className": "card",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <div
+                className="food-container"
+>
+                <img
+                                className="food-img"
+                                src={undefined}
+                />
+</div>,
+              <div
+                className="vote-btns"
+>
+                <img
+                                className="vote"
+                                src="https://cdn3.iconfinder.com/data/icons/pixo-icons-2/56/1-29-512.png"
+                />
+</div>,
+            ],
+            "className": "top",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": <img
+                  className="food-img"
+                  src={undefined}
+/>,
+                "className": "food-container",
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "className": "food-img",
+                  "src": undefined,
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "img",
+              },
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": <img
+                  className="vote"
+                  src="https://cdn3.iconfinder.com/data/icons/pixo-icons-2/56/1-29-512.png"
+/>,
+                "className": "vote-btns",
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "className": "vote",
+                  "src": "https://cdn3.iconfinder.com/data/icons/pixo-icons-2/56/1-29-512.png",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "img",
+              },
+              "type": "div",
+            },
+          ],
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <h1
+                className="food-title"
+/>,
+              <a
+                className="link"
+                href={undefined}
+>
+                Recipe
+</a>,
+            ],
+            "className": "bottom",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": undefined,
+                "className": "food-title",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "h1",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Recipe",
+                "className": "link",
+                "href": undefined,
+              },
+              "ref": null,
+              "rendered": "Recipe",
+              "type": "a",
+            },
+          ],
+          "type": "div",
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;

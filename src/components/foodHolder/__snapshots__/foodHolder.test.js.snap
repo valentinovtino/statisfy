@@ -1,11 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`App matches snapshot 1`] = `
+exports[`FoodHolder matches snapshot 1`] = `
 ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <withRouter(Connect(App))
-    storeFood={[Function]}
+  Symbol(enzyme.__unrendered__): <foodHolder
+    allState={Object {}}
+    food={Array []}
 />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
@@ -17,25 +18,27 @@ ShallowWrapper {
   Symbol(enzyme.__node__): Object {
     "instance": null,
     "key": undefined,
-    "nodeType": "class",
+    "nodeType": "host",
     "props": Object {
-      "render": [Function],
+      "children": Array [],
+      "className": "card-container",
     },
     "ref": null,
-    "rendered": null,
-    "type": [Function],
+    "rendered": Array [],
+    "type": "div",
   },
   Symbol(enzyme.__nodes__): Array [
     Object {
       "instance": null,
       "key": undefined,
-      "nodeType": "class",
+      "nodeType": "host",
       "props": Object {
-        "render": [Function],
+        "children": Array [],
+        "className": "card-container",
       },
       "ref": null,
-      "rendered": null,
-      "type": [Function],
+      "rendered": Array [],
+      "type": "div",
     },
   ],
   Symbol(enzyme.__options__): Object {
@@ -44,7 +47,6 @@ ShallowWrapper {
         "enableComponentDidUpdateOnSetState": true,
       },
     },
-    "disableLifecycleMethods": true,
   },
 }
 `;

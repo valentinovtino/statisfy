@@ -45,9 +45,7 @@ class App extends Component {
     this.props.storeFood(data.recipes);
   }
 
-  toggle = () => {
-    this.setState({click: true})
-  }
+
 
   render() {
     const { food } = this.props;
@@ -63,17 +61,18 @@ class App extends Component {
         {/* <Route exact path='./Sweet' component={FoodHolder} /> */}
 
         <div> 
+          <div>
+            <button className='savory-btn'></button>
+            <NavLink className='food-btn sweet-btn' to='/sweet' onClick={this.makeFetchSweet}>SWEET</NavLink>
+            <NavLink className='food-btn savory-btn' to='/savory' onClick={this.makeFetchSavory}>SAVORY</NavLink>
+            <NavLink className='food-btn' to='/nutty' onClick={this.makeFetchNutty}>NUTTY</NavLink>
+          </div>
           { 
             food.length > 0 ?
               <FoodHolder allState={this.state}/> :
               <div>
               </div>
           }
-          <div>
-            <NavLink className='food-btn' to='/sweet' onClick={this.makeFetchSweet}>SWEET</NavLink>
-            <NavLink className='food-btn' to='/savory' onClick={this.makeFetchSavory}>SAVORY</NavLink>
-            <NavLink className='food-btn' to='/nutty' onClick={this.makeFetchNutty}>NUTTY</NavLink>
-          </div>
           <Route exact path='/sweet' component={Sweet}/>
           <Route exact path='/savory' component={Savory}/>
           <Route exact path='/nutty' component={Nutty}/>
