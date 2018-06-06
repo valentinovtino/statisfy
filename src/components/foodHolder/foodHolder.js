@@ -2,9 +2,9 @@ import React from 'react';
 import { cleanData } from '../../apiCalls/helper';
 import Card from '../Card/Card';
 import './foodHolder.css';
+import PropTypes from 'prop-types';
 
 const foodHolder = (props) => {
-  {console.log(props)}
   let showOptions;
 
   if (props.allState.click === false) {
@@ -13,8 +13,8 @@ const foodHolder = (props) => {
     });     
   }
   if (props.allState.click === true) {
-    showOptions = props.favorites.map((fave) => {
-      return <Card allState={props.allState} fave={fave} addToFavorites={props.addToFavorites}/>;
+    showOptions = props.favorites.map((fave, index) => {
+      return <Card allState={props.allState} key={index} fave={fave} id={props.recipe_id} removeFavorite={props.removeFavorite}/>;
     });
   }
 
@@ -23,6 +23,16 @@ const foodHolder = (props) => {
       {showOptions}
     </div>
   );
+};
+
+foodHolder.propTypes = {
+  addToFavorites: PropTypes.func,
+  removeFavorite: PropTypes.func,
+  food: PropTypes.Array,
+  fave: PropTypes.Array,
+  allState: PropTypes.Object,
+  favorites: PropTypes.Array,
+  recipe_id: PropTypes.number
 };
 
 export default foodHolder;

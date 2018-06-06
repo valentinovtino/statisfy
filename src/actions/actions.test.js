@@ -1,5 +1,4 @@
 import * as actions from './Actions';
-// import configureStore from 'redux-mock-store';
 import { mockCleanedDataObj } from '../mockData';
 
 describe('Actions', () => {

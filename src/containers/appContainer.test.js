@@ -18,10 +18,10 @@ describe('AppContainer', () => {
       food: {}
     };
 
-    let expected = {}
+    let expected = {};
 
-    const mappedProps = mapStateToProps(mockState).food
+    const mappedProps = mapStateToProps(mockState).food;
 
-    expect(mappedProps).toEqual(expected)
+    expect(mappedProps).toEqual(expected);
   });
 });
