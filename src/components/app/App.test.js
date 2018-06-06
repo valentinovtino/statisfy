@@ -22,15 +22,6 @@ describe('App', () => {
     expect(wrapper.find('.savory-btn').length).toEqual(1)
   });
 
-  it('should render Sweet NavLink', () => {
-    const comp = (
-      <NavLink to="/sweet"  className={"test"}>
-          NaveLink Test
-      </NavLink>
-  );
-  const wrapper = shallow( comp );
-  expect(wrapper.instance().props.to).to.equal("/sweet");
-  })
 
   it('should storeFood when called', async () => {
     window.fetch = jest.fn().mockImplementation(() => Promise.resolve({json: () => Promise.resolve(mockObj)}))
