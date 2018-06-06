@@ -8,6 +8,7 @@ import Sweet from '../Sweet/Sweet';
 import Nutty from '../Nutty/Nutty';
 import Savory from '../Savory/Savory';
 import Favorites from '../Favorites/Favorites';
+import Home from '../Home/Home';
 
 class App extends Component {
   constructor(props) {
@@ -60,9 +61,9 @@ class App extends Component {
       <div className="App">
         {/* <header className="App-header">
         </header> */}
-            <div className='fave'>
-            <NavLink className='food-btn fave-btn' onClick={this.notifyFave} to='/fave'>My Kitchen</NavLink>
-            </div>
+        <div className='fave'>
+          <NavLink className='food-btn fave-btn' onClick={this.notifyFave} to='/fave'>My Kitchen</NavLink>
+        </div>
         <NavLink to='/' className="App-title">SATISY</NavLink>
         <p className='slogan'>What're you craving?..</p>
 
@@ -77,7 +78,8 @@ class App extends Component {
           <Route exact path='/sweet' component={Sweet}/>
           <Route exact path='/savory' component={Savory}/>
           <Route exact path='/nutty' component={Nutty}/>
-          <Route exact path='/fave' component={Favorites}/>  
+          <Route exact path='/fave' component={Favorites}/>
+          <Route exact path='/' component={Home} />  
         </div>
       </div>
     );

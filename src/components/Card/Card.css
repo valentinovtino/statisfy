@@ -10,6 +10,7 @@
     display: flex;
     flex-direction: column;
     border-radius: 25px;
+    justify-content: space-evenly;
 }
 
 .food-img {
@@ -32,13 +33,30 @@
 }
 
 .food-container {
-    width: 75%;
-    height: 80%;
+    width: 200px;
+    height: 150px;
 }
 .vote-btns {
     display: flex;
     flex-direction: column;
+    margin-left: 1em;
 }
+
+.like-btn {
+    border-radius: 50%;
+    width: 83px;
+    height: 78px;
+    position: absolute;
+    margin-top: 7em;
+    margin-left: .5em;
+    border: 1px solid black;
+    font-family: 'Boogaloo', cursive;
+}
+
+.like-btn:hover {
+    border: 2px solid gold;
+}
+
 
 .vote {
     height: 100px;
@@ -46,7 +64,6 @@
 }
 
 .bottom {
-    /* border: 1px solid green; */
     margin-top: 25px;
 }
 

@@ -5,6 +5,7 @@ import './foodHolder.css';
 import PropTypes from 'prop-types';
 
 const foodHolder = (props) => {
+ 
   let showOptions;
 
   if (props.allState.click === false) {
