@@ -2,9 +2,10 @@ import React from 'react';
 import { cleanData } from '../../apiCalls/helper';
 import Card from '../Card/Card';
 import './foodHolder.css';
+import PropTypes from 'prop-types';
 
 const foodHolder = (props) => {
-  {console.log(props)}
+
   let showOptions;
 
   if (props.allState.click === false) {

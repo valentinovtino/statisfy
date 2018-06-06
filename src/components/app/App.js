@@ -26,7 +26,7 @@ class App extends Component {
 
 
     this.props.storeFood(data.recipes);
-    this.setState({click: false})
+    this.setState({click: false});
   }
 
   makeFetchSavory = async () => {
@@ -36,7 +36,7 @@ class App extends Component {
 
 
     this.props.storeFood(data.recipes);
-    this.setState({click: false})
+    this.setState({click: false});
   }
 
   makeFetchNutty = async () => {
@@ -46,27 +46,22 @@ class App extends Component {
 
 
     this.props.storeFood(data.recipes);
-    this.setState({click: false})
+    this.setState({click: false});
   }
 
   notifyFave = () => {
-    this.setState({click: true})
+    this.setState({click: true});
   }
 
 
   render() {
     const { food } = this.props;
-    {console.log(this.props)}
 
     return (
       <div className="App">
         {/* <header className="App-header">
         </header> */}
         <NavLink to='/' className="App-title">SATISY</NavLink>
-        {/* <h1 className="App-title">SATISY</h1> */}
-        
-        {/* <Route exact path='/' component={} /> */}
-        {/* <Route exact path='./Sweet' component={FoodHolder} /> */}
 
         <div> 
           <div>
@@ -84,14 +79,15 @@ class App extends Component {
           <Route exact path='/sweet' component={Sweet}/>
           <Route exact path='/savory' component={Savory}/>
           <Route exact path='/nutty' component={Nutty}/>
-          <Route exact path='/fave' component={Favorites}/>
-          {/* <Route exact path='/' component={} /> */}
-           
+          <Route exact path='/fave' component={Favorites}/>  
         </div>
-       
       </div>
     );
   }
 }
 
+App.propTypes = {
+  food: PropTypes.Array,
+  storeFood: PropTypes.Array
+};
 export default App;

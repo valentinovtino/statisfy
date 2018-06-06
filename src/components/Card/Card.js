@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import { connect } from 'react-redux';
 import './Card.css';
+import PropTypes from 'prop-types';
 
 class Card extends Component {
   constructor(props) {
@@ -11,11 +12,11 @@ class Card extends Component {
   }
 
   handleFavorite = () => {
-    this.props.addToFavorites(this.props.food)
+    this.props.addToFavorites(this.props.food);
   }
 
   handleRemoveFavorite = () => {
-    this.props.removeFavorite(this.props.fave, this.props.fave.title)
+    this.props.removeFavorite(this.props.fave, this.props.fave.title);
   }
 
   render() {
@@ -62,5 +63,12 @@ class Card extends Component {
     );
   }
 }
+Card.propTypes = {
+  addToFavorites: PropTypes.func,
+  removeFavorite: PropTypes.func,
+  food: PropTypes.Array,
+  fave: PropTypes.Array,
+  allState: PropTypes.Object
+};
 
 export default Card;
