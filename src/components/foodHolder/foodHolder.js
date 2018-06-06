@@ -5,13 +5,13 @@ import './foodHolder.css';
 
 const foodHolder = (props) => {
 
-  const showHouses = props.food.map((food, index) => {
+  const showOptions = props.food.map((food, index) => {
     return <Card food={food} key={index}/>;
   });                                                                                                                                                                                         
 
   return (
     <div className='card-container'>
-      {showHouses}
+      {showOptions}
     </div>
   );
 };

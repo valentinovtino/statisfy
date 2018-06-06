@@ -8,7 +8,8 @@ export const mapDispatchToProps = (dispatch) => ({
 });
 
 export const mapStateToProps = (state) => ({
-  food: state.food
+  food: state.food,
+  favorites: state.favorites
 });
 
 export default withRouter(connect(mapStateToProps, mapDispatchToProps)(App));

@@ -6,3 +6,14 @@ export const food = (state = [], action) => {
       return state;
   }
 };
+
+export const favorites = (state = [], action) => {
+  switch (action.type) {
+    case 'CREATE_FAVORITES' :
+      return [...state, 
+        action.favorites
+      ];
+    default:
+      return state;
+  }
+};

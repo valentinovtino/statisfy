@@ -4,3 +4,13 @@ export const getFood = (food) => {
     food: food
   };
 };
+
+export const createFavorites = ({favorites}) => ({
+  type: 'CREATE_FAVORITES', 
+  favorites
+});
+
+export const addToFavorites = (food) = ({
+  type: 'ADD_TO_FAVORITES',
+  food
+})
