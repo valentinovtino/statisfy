@@ -24,11 +24,11 @@ export const mockCleanedDataObj =
       "image_url": "http://static.food2fork.com/40062066fa.jpg",
       "social_rank": 99.99792034435711,
       "publisher_url": "http://allrecipes.com"
-    }]
+    }];
 
 export const userCleanedData =
 [{"id": "54373",
   "img": "http://static.food2fork.com/FocacciaBread36db7.jpg", 
   "recipe": "http://www.twopeasandtheirpod.com/focaccia-bread/", 
   "title": 
- "Focaccia Bread"}]
+ "Focaccia Bread"}];

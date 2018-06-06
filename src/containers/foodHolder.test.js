@@ -7,9 +7,9 @@ describe('FoodHolder', () => {
       food: mockObj.recipes
     };
 
-    let expected = mockObj.recipes
+    let expected = mockObj.recipes;
 
-    const mappedProps = mapStateToProps(mockState).food
+    const mappedProps = mapStateToProps(mockState).food;
 
     expect(mappedProps).toEqual(expected);
   });
