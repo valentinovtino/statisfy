@@ -14,7 +14,7 @@ const foodHolder = (props) => {
   }
   if (props.allState.click === true) {
     showOptions = props.favorites.map((fave) => {
-      return <Card allState={props.allState} fave={fave} addToFavorites={props.addToFavorites}/>;
+      return <Card allState={props.allState} fave={fave} id={props.recipe_id} removeFavorite={props.removeFavorite}/>;
     });
   }
 

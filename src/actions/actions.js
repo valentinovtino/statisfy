@@ -14,3 +14,8 @@ export const addToFavorites = (food) => ({
   type: 'ADD_TO_FAVORITES',
   food
 });
+
+export const removeFavorite = (food) => ({
+  type: 'REMOVE_FAVORITE',
+  food
+});

@@ -14,6 +14,10 @@ class Card extends Component {
     this.props.addToFavorites(this.props.food)
   }
 
+  handleRemoveFavorite = () => {
+    this.props.removeFavorite(this.props.food)
+  }
+
   render() {
     const { food, fave } = this.props;
 
@@ -45,7 +49,7 @@ class Card extends Component {
             </div>
             <div className='vote-btns'>
               <img className='vote' src='https://cdn3.iconfinder.com/data/icons/pixo-icons-2/56/1-29-512.png'/>
-              <button onClick={this.handleFavorite}>FAVE</button>
+              <button onClick={this.handleRemoveFavorite}>Remove</button>
             </div>
           </div>
 
