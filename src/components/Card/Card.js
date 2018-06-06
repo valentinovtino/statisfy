@@ -15,7 +15,7 @@ class Card extends Component {
   }
 
   handleRemoveFavorite = () => {
-    this.props.removeFavorite(this.props.food)
+    this.props.removeFavorite(this.props.fave, this.props.fave.title)
   }
 
   render() {

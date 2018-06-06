@@ -16,8 +16,12 @@ export const favorites = (state = [], action) => {
     case 'ADD_TO_FAVORITES' :
       return [...state, ...favorites, action.food];
     case 'REMOVE_FAVORITE' :
-      const newState = [...state, state.favorites.filter(fave => fave.recipe_id !== action.recipe_id)];
-      return newState;
+      const newState = [...state];
+      console.log(newState);
+      const newFave = newState.filter(favorites => {
+        return favorites !== action.title;
+      });
+      return newFave;
     default:
       return state;
   }

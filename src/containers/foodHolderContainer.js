@@ -5,12 +5,13 @@ import { addToFavorites, removeFavorite } from '../actions/actions';
 
 export const mapStateToProps = (state) => ({
   food: state.food,
-  favorites: state.favorites
+  favorites: state.favorites, 
+  title: state.food.title
 });
 
 export const mapDispatchToProps = dispatch => ({
   addToFavorites: (food) => dispatch(addToFavorites(food)),
-  removeFavorite: (food) => dispatch(removeFavorite(food))
+  removeFavorite: (food, title) => dispatch(removeFavorite(food, title))
 });
 
 export default withRouter(connect(mapStateToProps, mapDispatchToProps)(FoodHolder));
