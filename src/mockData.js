@@ -32,3 +32,19 @@ export const userCleanedData =
   "recipe": "http://www.twopeasandtheirpod.com/focaccia-bread/", 
   "title": 
  "Focaccia Bread"}];
+
+ export const mockFave = [{"id": "54373",
+ "img": "http://static.food2fork.com/FocacciaBread36db7.jpg", 
+ "recipe": "http://www.twopeasandtheirpod.com/focaccia-bread/", 
+ "title": 
+"Focaccia Bread"},
+{"id": "54373",
+ "img": "http://static.food2fork.com/FocacciaBread36db7.jpg", 
+ "recipe": "http://www.twopeasandtheirpod.com/focaccia-bread/", 
+ "title": 
+"Focaccia Bread"},
+{"id": "54373",
+ "img": "http://static.food2fork.com/FocacciaBread36db7.jpg", 
+ "recipe": "http://www.twopeasandtheirpod.com/focaccia-bread/", 
+ "title": 
+"Focaccia Bread"}]

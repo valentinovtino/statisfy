@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from '../../containers/appContainer';
+import App from './App';
 import { shallow, mount } from 'enzyme';
 import { mockObj } from '../../mockData.js';
-import { NavLink } from 'react-router-dom';
+
 
 describe('App', () => {
   let wrapper;
@@ -22,11 +22,42 @@ describe('App', () => {
     expect(wrapper.find('.savory-btn').length).toEqual(1)
   });
 
+  it('should render Sweet button', () => {
+    wrapper = shallow(<App storeFood={mockStoreFood}/>, {disableLifecycleMethods: true});
+    expect(wrapper.find('.sweet-btn').length).toEqual(1)
+  });
+
+  it('should render nutty button', () => {
+    wrapper = shallow(<App storeFood={mockStoreFood}/>, {disableLifecycleMethods: true});
+    expect(wrapper.find('.nutty-btn').length).toEqual(1)
+  });
+
+  it('should render fave button', () => {
+    wrapper = shallow(<App storeFood={mockStoreFood}/>, {disableLifecycleMethods: true});
+    expect(wrapper.find('.fave-btn').length).toEqual(1)
+  });
+
 
   it('should storeFood when called', async () => {
     window.fetch = jest.fn().mockImplementation(() => Promise.resolve({json: () => Promise.resolve(mockObj)}))
 
     await wrapper.instance().makeFetchSweet();
+
+    expect(mockStoreFood).toHaveBeenCalledWith(mockObj.recipes);
+  });
+
+  it('should storeFood when called', async () => {
+    window.fetch = jest.fn().mockImplementation(() => Promise.resolve({json: () => Promise.resolve(mockObj)}))
+
+    await wrapper.instance().makeFetchSavory();
+
+    expect(mockStoreFood).toHaveBeenCalledWith(mockObj.recipes);
+  });
+
+  it('should storeFood when called', async () => {
+    window.fetch = jest.fn().mockImplementation(() => Promise.resolve({json: () => Promise.resolve(mockObj)}))
+
+    await wrapper.instance().makeFetchNutty();
 
     expect(mockStoreFood).toHaveBeenCalledWith(mockObj.recipes);
   });

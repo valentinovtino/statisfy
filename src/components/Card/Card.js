@@ -20,10 +20,10 @@ class Card extends Component {
   }
 
   render() {
-    const { food, fave } = this.props;
-
+    const { food, fave, allState } = this.props;
+    // const clickProp = allState.click;
     return (
-      this.props.allState.click === false ?
+      this.props.food ?
 
         <div className="card">
           <div className="top">
@@ -32,7 +32,7 @@ class Card extends Component {
             </div>
             <div className='vote-btns'>
               <img className='vote' src='https://cdn3.iconfinder.com/data/icons/pixo-icons-2/56/1-29-512.png'/>
-              <button onClick={this.handleFavorite}>FAVE</button>
+              <button className='like-btn'onClick={this.handleFavorite}>FAVE</button>
             </div>
           </div>
 
@@ -50,7 +50,7 @@ class Card extends Component {
             </div>
             <div className='vote-btns'>
               <img className='vote' src='https://cdn3.iconfinder.com/data/icons/pixo-icons-2/56/1-29-512.png'/>
-              <button onClick={this.handleRemoveFavorite}>Remove</button>
+              <button className='remove-btn like-btn' onClick={this.handleRemoveFavorite}>Remove</button>
             </div>
           </div>
 
@@ -67,8 +67,8 @@ class Card extends Component {
 Card.propTypes = {
   addToFavorites: PropTypes.func,
   removeFavorite: PropTypes.func,
-  food: PropTypes.Array,
-  fave: PropTypes.Array,
+  food: PropTypes.Object,
+  fave: PropTypes.func,
   allState: PropTypes.Object
 };
 
