@@ -50,7 +50,7 @@ class Card extends Component {
             </div>
             <div className='vote-btns'>
               <img className='vote' src='https://cdn3.iconfinder.com/data/icons/pixo-icons-2/56/1-29-512.png'/>
-              <button onClick={this.handleRemoveFavorite}>Remove</button>
+              <button className='remove-btn' onClick={this.handleRemoveFavorite}>Remove</button>
             </div>
           </div>
 

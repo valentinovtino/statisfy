@@ -15,4 +15,40 @@ describe('Actions', () => {
       expect(actual).toEqual(expected);
     });
   });
+
+  describe('Create User', () => {
+    it('should return an action object', () => {
+      const favorites = {
+    };
+      
+      let expected = {
+        type: 'CREATE_FAVORITES'
+      };
+
+      let actual = actions.createFavorites(favorites);
+
+      expect(actual).toEqual(expected);
+    });
+  });
+
+  describe('Add to Favorites', () => {
+    it('should return an action object', () => {
+      let food = {
+
+      };
+
+      let expected = {
+        type: 'ADD_TO_FAVORITES',
+        food
+      };
+
+      let actual = actions.addToFavorites(food);
+
+      expect(actual).toEqual(expected);
+    });
+  });
+
+  describe('Remove from Favorites', () => {
+    
+  })
 });
