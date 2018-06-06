@@ -8,9 +8,9 @@
 
 ![login screen](./images/satisfy.main.png)
 
-![main screen](./src/images/satisfy.sweet.png)
+![main screen](./images/satisfy.sweet.png)
 
-![fave screen](./src/images/satisfy.fave.png)
+![fave screen](./images/satisfy.fave.png)
 
 ## Contributors
 
