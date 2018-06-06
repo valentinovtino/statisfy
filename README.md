@@ -6,7 +6,7 @@
 
 ### *Example* 
 
-![login screen](./src/images/satisfy.main.png)
+![login screen](./images/satisfy.main.png)
 
 ![main screen](./src/images/satisfy.sweet.png)
 
