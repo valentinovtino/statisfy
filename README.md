@@ -2,7 +2,7 @@
 
  Good nutrition is an important part of leading a healthy lifestyle.
   However there are many sugary distractions that keep us from making healthy choices. 
-  Fight your cravings with Satisfy! The healthy alternatives, that actually taste good
+  Fight your cravings with Satisfy! The healthy alternatives app that actually tastes good! ;)
 
 ### *Example* 
 
