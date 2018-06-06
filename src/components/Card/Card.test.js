@@ -6,19 +6,25 @@ import ReactDOM from 'react-dom';
 describe('Card', () => {
   let wrapper;
   let mockFood = {};
+  let mockFunction = jest.fn();
 
   beforeEach(() => {
-    wrapper = shallow(<Card food={mockFood}/>);
+    wrapper = shallow(<Card food={mockFood} addToFavorites={mockFunction}/>);
   });
   it('should render a card', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('should call handleFavorite when add to fav btn is clicked', () => {
+  it('should call handleFavorite when Add to favorites button is clicked', () => {
+    wrapper = mount(<Card addToFavorites={mockFunction} food={mockFood} />);
 
+    const spy = spyOn(wrapper.instance(), 'handleFavorite');
+
+    wrapper.instance().forceUpdate();
+    wrapper.find('button').simulate('click');
+
+    expect(spy).toHaveBeenCalled();
   });
 
-  it('should redirect to home page if title is clicked', () => {
-        
-  });
+ 
 });

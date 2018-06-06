@@ -20,10 +20,10 @@ class Card extends Component {
   }
 
   render() {
-    const { food, fave } = this.props;
-
+    const { food, fave, allState } = this.props;
+    // const clickProp = allState.click;
     return (
-      this.props.allState.click === false ?
+      this.props.food ?
 
         <div className="card">
           <div className="top">
@@ -67,8 +67,8 @@ class Card extends Component {
 Card.propTypes = {
   addToFavorites: PropTypes.func,
   removeFavorite: PropTypes.func,
-  food: PropTypes.Array,
-  fave: PropTypes.Array,
+  food: PropTypes.Object,
+  fave: PropTypes.func,
   allState: PropTypes.Object
 };
 
