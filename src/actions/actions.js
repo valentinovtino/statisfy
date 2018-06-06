@@ -10,7 +10,7 @@ export const createFavorites = ({favorites}) => ({
   favorites
 });
 
-export const addToFavorites = (food) = ({
+export const addToFavorites = (food) => ({
   type: 'ADD_TO_FAVORITES',
   food
-})
+});

@@ -4,9 +4,9 @@ import Card from '../Card/Card';
 import './foodHolder.css';
 
 const foodHolder = (props) => {
-
+  {console.log(props)}
   const showOptions = props.food.map((food, index) => {
-    return <Card food={food} key={index}/>;
+    return <Card food={food} key={index} addToFavorites={props.addToFavorites}/>;
   });                                                                                                                                                                                         
 
   return (

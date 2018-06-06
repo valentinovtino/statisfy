@@ -8,6 +8,7 @@ import AppContainer from '../../containers/appContainer';
 import Sweet from '../Sweet/Sweet';
 import Nutty from '../Nutty/Nutty';
 import Savory from '../Savory/Savory';
+import Favorites from '../Favorites/Favorites';
 
 class App extends Component {
   constructor(props) {
@@ -66,6 +67,7 @@ class App extends Component {
             <NavLink className='food-btn sweet-btn' to='/sweet' onClick={this.makeFetchSweet}>SWEET</NavLink>
             <NavLink className='food-btn savory-btn' to='/savory' onClick={this.makeFetchSavory}>SAVORY</NavLink>
             <NavLink className='food-btn' to='/nutty' onClick={this.makeFetchNutty}>NUTTY</NavLink>
+            <NavLink className='food-btn' to='/fave'>My Kitchen</NavLink>
           </div>
           { 
             food.length > 0 ?
@@ -76,6 +78,7 @@ class App extends Component {
           <Route exact path='/sweet' component={Sweet}/>
           <Route exact path='/savory' component={Savory}/>
           <Route exact path='/nutty' component={Nutty}/>
+          <Route exact path='/fave' component={Favorites}/>
           {/* <Route exact path='/' component={} /> */}
            
         </div>

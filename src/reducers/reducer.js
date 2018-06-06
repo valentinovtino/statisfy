@@ -13,6 +13,8 @@ export const favorites = (state = [], action) => {
       return [...state, 
         action.favorites
       ];
+    case 'ADD_TO_FAVORITES' :
+    return [...state, ...favorites, action.food];
     default:
       return state;
   }
