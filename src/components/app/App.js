@@ -60,14 +60,17 @@ class App extends Component {
       <div className="App">
         {/* <header className="App-header">
         </header> */}
+            <div className='fave'>
+            <NavLink className='food-btn fave-btn' onClick={this.notifyFave} to='/fave'>My Kitchen</NavLink>
+            </div>
         <NavLink to='/' className="App-title">SATISY</NavLink>
+        <p className='slogan'>What're you craving?..</p>
 
         <div> 
-          <div>
+          <div className='navs'>
             <NavLink className='food-btn sweet-btn' to='/sweet' onClick={this.makeFetchSweet}>SWEET</NavLink>
             <NavLink className='food-btn savory-btn' to='/savory' onClick={this.makeFetchSavory}>SAVORY</NavLink>
             <NavLink className='food-btn nutty-btn' to='/nutty' onClick={this.makeFetchNutty}>NUTTY</NavLink>
-            <NavLink className='food-btn fave-btn' onClick={this.notifyFave} to='/fave'>My Kitchen</NavLink>
           </div>
          
           <FoodHolder allState={this.state}/> 
