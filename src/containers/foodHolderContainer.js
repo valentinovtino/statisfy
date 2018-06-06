@@ -4,7 +4,9 @@ import { withRouter } from 'react-router';
 import { addToFavorites } from '../actions/actions';
 
 export const mapStateToProps = (state) => ({
-  food: state.food
+  food: state.food,
+  favorites: state.favorites
+
 });
 
 export const mapDispatchToProps = dispatch => ({

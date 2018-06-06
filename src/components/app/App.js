@@ -26,6 +26,7 @@ class App extends Component {
 
 
     this.props.storeFood(data.recipes);
+    this.setState({click: false})
   }
 
   makeFetchSavory = async () => {
@@ -35,6 +36,7 @@ class App extends Component {
 
 
     this.props.storeFood(data.recipes);
+    this.setState({click: false})
   }
 
   makeFetchNutty = async () => {
@@ -44,8 +46,12 @@ class App extends Component {
 
 
     this.props.storeFood(data.recipes);
+    this.setState({click: false})
   }
 
+  notifyFave = () => {
+    this.setState({click: true})
+  }
 
 
   render() {
@@ -67,7 +73,7 @@ class App extends Component {
             <NavLink className='food-btn sweet-btn' to='/sweet' onClick={this.makeFetchSweet}>SWEET</NavLink>
             <NavLink className='food-btn savory-btn' to='/savory' onClick={this.makeFetchSavory}>SAVORY</NavLink>
             <NavLink className='food-btn' to='/nutty' onClick={this.makeFetchNutty}>NUTTY</NavLink>
-            <NavLink className='food-btn' to='/fave'>My Kitchen</NavLink>
+            <NavLink className='food-btn' onClick={this.notifyFave} to='/fave'>My Kitchen</NavLink>
           </div>
           { 
             food.length > 0 ?
