@@ -39,7 +39,7 @@ ShallowWrapper {
           className="App-title"
           to="/"
 >
-          SATISY
+          SATISFY
 </NavLink>,
         <p
           className="slogan"
@@ -159,12 +159,12 @@ ShallowWrapper {
         "props": Object {
           "activeClassName": "active",
           "ariaCurrent": "true",
-          "children": "SATISY",
+          "children": "SATISFY",
           "className": "App-title",
           "to": "/",
         },
         "ref": null,
-        "rendered": "SATISY",
+        "rendered": "SATISFY",
         "type": [Function],
       },
       Object {
@@ -453,7 +453,7 @@ ShallowWrapper {
             className="App-title"
             to="/"
 >
-            SATISY
+            SATISFY
 </NavLink>,
           <p
             className="slogan"
@@ -573,12 +573,12 @@ ShallowWrapper {
           "props": Object {
             "activeClassName": "active",
             "ariaCurrent": "true",
-            "children": "SATISY",
+            "children": "SATISFY",
             "className": "App-title",
             "to": "/",
           },
           "ref": null,
-          "rendered": "SATISY",
+          "rendered": "SATISFY",
           "type": [Function],
         },
         Object {

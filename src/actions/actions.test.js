@@ -16,7 +16,7 @@ describe('Actions', () => {
     });
   });
 
-  describe('Create User', () => {
+  describe('Create Favorites', () => {
     it('should return an action object', () => {
       const favorites = {
       };

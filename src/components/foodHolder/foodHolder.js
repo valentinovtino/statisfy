@@ -1,29 +1,36 @@
-import React from 'react';
+import React, {Component} from 'react';
 import Card from '../Card/Card';
 import './foodHolder.css';
 import PropTypes from 'prop-types';
+import { category } from '../../reducers/reducer';
 
-const foodHolder = (props) => {
- 
-  let showOptions;
+class foodHolder extends Component {
 
-  if (props.allState.click === false) {
-    showOptions = props.food.map((food, index) => {
-      return <Card allState={props.allState} food={food} key={index} addToFavorites={props.addToFavorites}/>;
+  render(props) {
+   
+    let showOptions;
+    
+    const { location, food, favorites, category } = this.props;
+    const cardData = location.pathname === '/fave' ? favorites : food[category];
+    const removeFave = location.pathname ==='/fave' ? this.props.removeFavorite : null;
+    const addFave = location.pathname !== '/fave' ? this.props.addToFavorites : null;
+
+    
+    showOptions = cardData.map((food, index) => {
+      return <Card 
+        food={food} 
+        key={index} 
+         />;
     });     
+  
+    
+    return (
+      <div className='card-container'>
+        {showOptions}
+      </div>
+    );
   }
-  if (props.allState.click === true) {
-    showOptions = props.favorites.map((fave, index) => {
-      return <Card allState={props.allState} key={index} fave={fave} id={props.recipe_id} removeFavorite={props.removeFavorite}/>;
-    });
-  }
-
-  return (
-    <div className='card-container'>
-      {showOptions}
-    </div>
-  );
-};
+}
 
 foodHolder.propTypes = {
   addToFavorites: PropTypes.func,

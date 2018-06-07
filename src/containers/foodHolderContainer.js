@@ -5,7 +5,8 @@ import { addToFavorites, removeFavorite } from '../actions/actions';
 
 export const mapStateToProps = (state) => ({
   food: state.food,
-  favorites: state.favorites
+  favorites: state.favorites, 
+  category: state.category
 });
 
 export const mapDispatchToProps = dispatch => ({
