@@ -4,20 +4,12 @@ import { getFoodData } from '../../apiCalls/api';
 import PropTypes from 'prop-types';
 import FoodHolder from '../../containers/foodHolderContainer';
 import { NavLink, Route } from 'react-router-dom';
-import Sweet from '../Sweet/Sweet';
-import Nutty from '../Nutty/Nutty';
-import Savory from '../Savory/Savory';
-import Favorites from '../Favorites/Favorites';
 import Home from '../Home/Home';
 import { category } from '../../reducers/reducer';
 
 class App extends Component {
   constructor(props) {
-    super(props);
-    this.state = {
-      click: false,
-      test: 'testing'
-    };                                 
+    super(props);                             
   }
 
   checkStoreForValue = async (category) => {
@@ -34,12 +26,6 @@ class App extends Component {
     this.props.storeFood(response.recipes, category);
     this.setState({click: false});
   }
-
-
-  notifyFave = () => {
-    this.setState({click: true});
-  }
-
 
   render() {
     const { food, category } = this.props;
@@ -63,12 +49,8 @@ class App extends Component {
               <FoodHolder /> :
               <div>
               </div>
-
           }
-          {/* <Route exact path='/sweet' component={Sweet}/> */}
-          {/* <Route exact path='/savory' component={FoodHolder}/> */}
-          {/* <Route exact path='/nutty' component={FoodHolder}/> */}
-          {/* <Route exact path='/fave' component={FoodHolder}/> */}
+        
           <Route exact path='/' component={Home} />  
         </div>
       </div>
