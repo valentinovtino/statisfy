@@ -4,80 +4,64 @@ import { getFoodData } from '../../apiCalls/api';
 import PropTypes from 'prop-types';
 import FoodHolder from '../../containers/foodHolderContainer';
 import { NavLink, Route } from 'react-router-dom';
-import Sweet from '../Sweet/Sweet';
-import Nutty from '../Nutty/Nutty';
-import Savory from '../Savory/Savory';
-import Favorites from '../Favorites/Favorites';
 import Home from '../Home/Home';
 
 class App extends Component {
   constructor(props) {
-    super(props);
-    this.state = {
-      click: false,
-      test: 'testing'
-    };                                 
+    super(props);                             
   }
 
-  makeFetchSweet = async () => {
-    const url = `https://food2fork.com/api/search?key=e3e6267f800bf94ed1db6763e826e406&q=vegan`;
+  checkStoreForValue = async (category) => {
+    this.props.storeCategory(category);
+    !this.props.food[category] ?
+      await this.makeCategoryFetch(category) :
+      null;
+  }
+
+  makeCategoryFetch = async (category) => {
+    const key = `42b3556f18500a6865d3d823bb8a3e3c`;
+    const url =`https://food2fork.com/api/search?key=${key}&q=${category}`;
     const response = await getFoodData(url);
-    const foodData = response;
-
-
-    this.props.storeFood(foodData.recipes);
-    this.setState({click: false});
+  
+    this.props.storeFood(response.recipes, category);
   }
-
-  makeFetchSavory = async () => {
-    const url = 'https://food2fork.com/api/search?key=e3e6267f800bf94ed1db6763e826e406&q=savory';
-    const response = await getFoodData(url);
-    const foodData = response;
-
-
-    this.props.storeFood(foodData.recipes);
-    this.setState({click: false});
-  }
-
-  makeFetchNutty = async () => {
-    const url = 'https://food2fork.com/api/search?key=e3e6267f800bf94ed1db6763e826e406&q=nutty';
-    const response = await getFoodData(url);
-    const foodData = response;
-
-
-    this.props.storeFood(foodData.recipes);
-    this.setState({click: false});
-  }
-
-  notifyFave = () => {
-    this.setState({click: true});
-  }
-
 
   render() {
-
+    const { food, category } = this.props;
     return (
       <div className="App">
-        {/* <header className="App-header">
-        </header> */}
+      
         <div className='fave'>
-          <NavLink className='food-btn fave-btn' onClick={this.notifyFave} to='/fave'>My Kitchen</NavLink>
+          <NavLink 
+            className='food-btn fave-btn' 
+            onClick={this.notifyFave} 
+            to='/fave'>My Kitchen</NavLink>
         </div>
         <NavLink to='/' className="App-title">SATISFY</NavLink>
-        <p className='slogan'>What're you craving?..</p>
+        <p className='slogan'>What are you craving?..</p>
 
         <div> 
           <div className='navs'>
-            <NavLink className='food-btn sweet-btn' to='/sweet' onClick={this.makeFetchSweet}>SWEET</NavLink>
-            <NavLink className='food-btn savory-btn' to='/savory' onClick={this.makeFetchSavory}>SAVORY</NavLink>
-            <NavLink className='food-btn nutty-btn' to='/nutty' onClick={this.makeFetchNutty}>NUTTY</NavLink>
+            <NavLink 
+              className='food-btn sweet-btn' 
+              to='/sweet' 
+              onClick={() => this.checkStoreForValue('vegan')}>SWEET</NavLink>
+            <NavLink 
+              className='food-btn savory-btn' 
+              to='/savory' 
+              onClick={() => this.checkStoreForValue('savory')}>SAVORY</NavLink>
+            <NavLink 
+              className='food-btn nutty-btn' 
+              to='/nutty' 
+              onClick={() => this.checkStoreForValue('nutty')}>NUTTY</NavLink>
           </div>
-         
-          <FoodHolder allState={this.state}/> 
-          <Route exact path='/sweet' component={Sweet}/>
-          <Route exact path='/savory' component={Savory}/>
-          <Route exact path='/nutty' component={Nutty}/>
-          <Route exact path='/fave' component={Favorites}/>
+          {
+            food[category] ?
+              <FoodHolder /> :
+              <div>
+              </div>
+          }
+        
           <Route exact path='/' component={Home} />  
         </div>
       </div>
@@ -87,6 +71,9 @@ class App extends Component {
 
 App.propTypes = {
   food: PropTypes.func,
-  storeFood: PropTypes.func.isRequired
+  category: PropTypes.string,
+  storeFood: PropTypes.func.isRequired,
+  storeCategory: PropTypes.func.isRequired
 };
+
 export default App;

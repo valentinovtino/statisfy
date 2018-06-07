@@ -1,11 +1,15 @@
-export const getFood = (food) => {
-  return {
-    type: 'GET_FOOD',
-    food: food
-  };
-};
+export const getFood = (food, category) => ({
+  type: 'GET_FOOD',
+  food, 
+  category
+});
 
-export const createFavorites = ({favorites}) => ({
+export const storeCategory = (category) => ({
+  type: 'STORE_CATEGORY',
+  category
+});
+
+export const createFavorites = (favorites) => ({
   type: 'CREATE_FAVORITES', 
   favorites
 });
@@ -15,7 +19,7 @@ export const addToFavorites = (food) => ({
   food
 });
 
-export const removeFavorite = (title) => ({
+export const removeFavorite = (food) => ({
   type: 'REMOVE_FAVORITE',
-  title
+  food
 });

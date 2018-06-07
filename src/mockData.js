@@ -26,6 +26,8 @@ export const mockCleanedDataObj =
       "publisher_url": "http://allrecipes.com"
     }];
 
+export const mockCategory = 'savory';
+
 export const userCleanedData =
 [{"id": "54373",
   "img": "http://static.food2fork.com/FocacciaBread36db7.jpg", 

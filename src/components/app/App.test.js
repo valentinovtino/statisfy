@@ -1,8 +1,7 @@
 import React from 'react';
 import App from './App';
 import { shallow } from 'enzyme';
-import { mockObj } from '../../mockData.js';
-
+import { mockObj, userCleanedData, mockCategory } from '../../mockData.js';
 
 describe('App', () => {
   let wrapper;
@@ -38,9 +37,17 @@ describe('App', () => {
 
 
   it('should storeFood when called', async () => {
+    window.fetch = jest.fn().mockImplementation(() => Promise.resolve({json: () => Promise.resolve(userCleanedData)}));
+
+    await wrapper.instance().makeCategoryFetch();
+
+    expect(mockStoreFood).toHaveBeenCalledWith(userCleanedData, mockCategory);
+  });
+
+  it('should storeFood when called', async () => {
     window.fetch = jest.fn().mockImplementation(() => Promise.resolve({json: () => Promise.resolve(mockObj)}));
 
-    await wrapper.instance().makeFetchSweet();
+    await wrapper.instance().makeCategoryFetch();
 
     expect(mockStoreFood).toHaveBeenCalledWith(mockObj.recipes);
   });
@@ -48,15 +55,7 @@ describe('App', () => {
   it('should storeFood when called', async () => {
     window.fetch = jest.fn().mockImplementation(() => Promise.resolve({json: () => Promise.resolve(mockObj)}));
 
-    await wrapper.instance().makeFetchSavory();
-
-    expect(mockStoreFood).toHaveBeenCalledWith(mockObj.recipes);
-  });
-
-  it('should storeFood when called', async () => {
-    window.fetch = jest.fn().mockImplementation(() => Promise.resolve({json: () => Promise.resolve(mockObj)}));
-
-    await wrapper.instance().makeFetchNutty();
+    await wrapper.instance().makeCategoryFetch();
 
     expect(mockStoreFood).toHaveBeenCalledWith(mockObj.recipes);
   });
