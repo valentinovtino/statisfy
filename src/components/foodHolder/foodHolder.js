@@ -29,9 +29,9 @@ class foodHolder extends Component {
 foodHolder.propTypes = {
   addToFavorites: PropTypes.func,
   removeFavorite: PropTypes.func,
-  food: PropTypes.func,
-  fave: PropTypes.Array,
-  favorites: PropTypes.Array,
+  food: PropTypes.array,
+  fave: PropTypes.array,
+  favorites: PropTypes.array,
   location: PropTypes.string,
   category: PropTypes.string
 };

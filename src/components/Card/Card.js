@@ -50,8 +50,8 @@ class Card extends Component {
 Card.propTypes = {
   addToFavorites: PropTypes.func,
   removeFavorite: PropTypes.func,
-  food: PropTypes.Object,
-  fave: PropTypes.func,
+  food: PropTypes.array,
+  fave: PropTypes.array,
   allState: PropTypes.Object, 
   location: PropTypes.string
 };
