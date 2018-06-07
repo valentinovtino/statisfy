@@ -1,4 +1,4 @@
-import { mockObj, mockCleanedDataObj, userCleanedData } from '../mockData';
+import { mockObj, userCleanedData } from '../mockData';
 import { cleanData } from './helper';
 
 describe('Helper', () => {

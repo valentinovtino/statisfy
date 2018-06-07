@@ -9,7 +9,7 @@ export const storeCategory = (category) => ({
   category
 });
 
-export const createFavorites = ({favorites}) => ({
+export const createFavorites = (favorites) => ({
   type: 'CREATE_FAVORITES', 
   favorites
 });

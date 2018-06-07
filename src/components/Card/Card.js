@@ -8,17 +8,20 @@ import { addToFavorites, removeFavorite } from '../../actions/actions';
 class Card extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      test: ''
-    };
   }
 
-
   render() {
-    const { food, fave, location } = this.props;
-    
-    const button = location.pathname === '/fave' ? <button className='like-btn'onClick={() => this.props.removeFavorite(this.props.food)}>REMOVE</button> :
-    <button className='like-btn'onClick={() => this.props.addToFavorites(this.props.food)}>FAVE</button>;
+    const imgData = `/data/icons/pixo-icons-2/56/1-29-512.png`;
+    const { food, location } = this.props;
+    const button = location.pathname === '/fave' ? 
+      <button className='like-btn'
+        onClick={
+          () => this.props.removeFavorite(this.props.food)
+        }>REMOVE</button> :
+      <button className='like-btn'
+        onClick={
+          () => this.props.addToFavorites(this.props.food)
+        }>FAVE</button>;
 
     return (
       <div className="card" id={food.recipe_id}>
@@ -27,7 +30,9 @@ class Card extends Component {
             <img className="food-img" src={food.image_url}/>
           </div>
           <div className='vote-btns'>
-            <img className='vote' src='https://cdn3.iconfinder.com/data/icons/pixo-icons-2/56/1-29-512.png'/>
+            <img 
+              className='vote' 
+              src={`https://cdn3.iconfinder.com${imgData}`}/>
             {button}
           </div>
         </div>
@@ -47,7 +52,8 @@ Card.propTypes = {
   removeFavorite: PropTypes.func,
   food: PropTypes.Object,
   fave: PropTypes.func,
-  allState: PropTypes.Object
+  allState: PropTypes.Object, 
+  location: PropTypes.string
 };
 
 export const mapStateToProps = (state) => ({

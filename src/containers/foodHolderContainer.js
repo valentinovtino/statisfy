@@ -14,4 +14,4 @@ export const mapDispatchToProps = dispatch => ({
   removeFavorite: (food, title) => dispatch(removeFavorite(food, title))
 });
 
-export default withRouter(connect(mapStateToProps, mapDispatchToProps)(FoodHolder));
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(FoodHolder)); 
