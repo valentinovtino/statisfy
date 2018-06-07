@@ -73,7 +73,7 @@ App.propTypes = {
   food: PropTypes.func,
   category: PropTypes.string,
   storeFood: PropTypes.func.isRequired,
-  storeCategory: PropTypes.func.isRequired
+  storeCategory: PropTypes.func
 };
 
 export default App;

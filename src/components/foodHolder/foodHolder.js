@@ -30,7 +30,6 @@ foodHolder.propTypes = {
   addToFavorites: PropTypes.func,
   removeFavorite: PropTypes.func,
   food: PropTypes.array,
-  fave: PropTypes.array,
   favorites: PropTypes.array,
   location: PropTypes.string,
   category: PropTypes.string

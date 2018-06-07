@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import './Card.css';
 import PropTypes from 'prop-types';
-import { withRouter } from 'react-router';
 import { connect } from "react-redux";
 import { addToFavorites, removeFavorite } from '../../actions/actions';
 
@@ -65,5 +64,5 @@ export const mapDispatchToProps = (dispatch) => ({
   removeFavorite: (food, title) => dispatch(removeFavorite(food, title))
 });
 
-export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Card));
+export default connect((mapStateToProps, mapDispatchToProps)(Card));
 

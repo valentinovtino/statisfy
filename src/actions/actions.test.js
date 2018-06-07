@@ -18,7 +18,6 @@ describe('Actions', () => {
 
   describe('Create Favorites', () => {
     it('should return an action object', () => {
-      
       let expected = {
         type: 'CREATE_FAVORITES'
       };
