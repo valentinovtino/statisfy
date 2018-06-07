@@ -18,14 +18,13 @@ describe('Actions', () => {
 
   describe('Create Favorites', () => {
     it('should return an action object', () => {
-      const favorites = {
-      };
+      
       
       let expected = {
         type: 'CREATE_FAVORITES'
       };
 
-      let actual = actions.createFavorites(favorites);
+      let actual = actions.createFavorites();
 
       expect(actual).toEqual(expected);
     });
@@ -52,7 +51,7 @@ describe('Actions', () => {
     it('should return an action object', () => {
       let expected = {
         type: 'REMOVE_FAVORITE',
-        title: 'Herb marinated chicken'
+        food: 'Herb marinated chicken'
       };
 
       let actual = actions.removeFavorite('Herb marinated chicken');

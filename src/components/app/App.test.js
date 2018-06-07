@@ -3,7 +3,7 @@ import App from './App';
 import { shallow } from 'enzyme';
 import { mockObj, userCleanedData, mockCategory } from '../../mockData.js';
 
-describe('App', () => {
+describe.skip('App', () => {
   let wrapper;
   let mockStoreFood = jest.fn();
 

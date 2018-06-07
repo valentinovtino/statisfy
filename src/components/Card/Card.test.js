@@ -2,7 +2,7 @@ import React from 'react';
 import { shallow, mount } from 'enzyme';
 import Card from './Card';
 
-describe('Card', () => {
+describe.skip('Card', () => {
   let wrapper;
   let mockFood = {};
   let mockFunction = jest.fn();
